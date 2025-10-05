@@ -1,0 +1,44 @@
+{
+  // Enable pretty URLs: "/about" will serve "about.html" automatically
+  "cleanUrls": true,
+
+  // Rewrites map user‑friendly routes to your HTML files.  Without
+  // rewrites, Vercel would try to find a file matching the path
+  // exactly; with these rules you can visit "/admin" rather than
+  // "/admin.html" and so on.
+  "rewrites": [
+    { "source": "/",       "destination": "/index.html" },
+    { "source": "/admin",   "destination": "/admin.html" },
+    { "source": "/ajukan",  "destination": "/ajukan.html" },
+    { "source": "/status",  "destination": "/status.html" },
+    { "source": "/login",   "destination": "/login.html" }
+  ],
+
+  // Optional headers.  You can define security headers here.  For
+  // example, uncomment the lines below to enable a basic content
+  // security policy and prevent click‑jacking.  Adjust as needed.
+  /*
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ],
+  */
+
+  // If you deploy serverless API functions (for example under
+  // `/api/requests`), Vercel will automatically handle them.  You
+  // don't need to configure anything here unless you want to
+  // rewrite API routes.  See the Vercel docs for details.
+  "functions": {
+    // Example of customizing the runtime for your Python API.
+    // Uncomment and adjust if you add Python functions under `/api`.
+    // "api/**/*.py": {
+    //   "runtime": "python3.9"
+    // }
+  }
+}

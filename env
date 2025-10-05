@@ -1,0 +1,18 @@
+# Configuration for Sistem Informasi Manajemen Jadwal BAP
+#
+# Anda bisa menyesuaikan nilai-nilai berikut sesuai kebutuhan.
+# Pastikan file .env ini tidak dibagikan ke publik dan ditambahkan
+# ke .gitignore jika menggunakan sistem version control.
+
+# Path atau URI basis data.  Jika menggunakan SQLite, cukup
+# berikan nama file (misal bap.db berada di direktori kerja).
+DB_PATH=bap.db
+
+# Kredensial admin bawaan.  Untuk produksi, gunakan hash kuat
+# (misalnya bcrypt) dan ganti password default ini.
+ADMIN_USER=admin
+ADMIN_PASS=12345
+
+# Port server ketika menjalankan server.py.  Jika dikosongkan,
+# server.py akan menggunakan port 8000 secara default.
+PORT=8000
